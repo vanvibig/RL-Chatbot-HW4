@@ -87,6 +87,8 @@ class Utils:
 
 			conv_pair.append([q, a])
 
+			print "run __extractConvPair"
+
 	def __genWordList(self):
 		self.word_freq_dict = defaultdict(float)
 		total_word_count = 0.0
@@ -107,6 +109,8 @@ class Utils:
 		self.word_index_dict = defaultdict(lambda: self.marker_list.index(self.MARKER_OOV))
 		self.word_index_dict.update([(self.word_list[i], i) for i in range(len(self.word_list))])
 
+		print "run __genWordList"
+
 	def __genWordVecDict(self):
 		if not os.path.isfile(self.filename_word_vec):
 			return
@@ -123,6 +127,8 @@ class Utils:
 			self.word_vec_dict[marker] = np.zeros([300], dtype=np.float32)
 			print self.word_vec_dict[marker]
 
+		print "run __genWordVecDict"
+
 
 	def __readTestQuestions(self):
 		file = open(self.filename_sample_test)
@@ -135,6 +141,8 @@ class Utils:
 		for line in file:
 			line.replace('\n', '')
 			self.test_questions.append(self.captionToTokenList(line))
+
+		print "run __readTestQuestions"
 
 	@staticmethod
 	def captionToTokenList(caption):
