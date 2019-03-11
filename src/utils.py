@@ -112,10 +112,11 @@ class Utils:
 		print "run __genWordList"
 
 	def __genWordVecDict(self):
+    	print "he error 0"
 		if not os.path.isfile(self.filename_word_vec):
-    		print "he error"
+    		print "he error 1"
 			return
-
+		print "here error 2"
 		self.word_vec_dict = defaultdict(lambda: self.MARKER_OOV)
 		print self.word_vec_dict
 		with open(self.filename_word_vec, 'r') as file:
