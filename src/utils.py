@@ -184,6 +184,7 @@ class Utils:
 
 if __name__ == '__main__':
 	utils = Utils()
+	print utils.word_vec_dict
 	file = open('data/word_list.txt', 'w')
 	for word in utils.word_list:
 		file.write(word + ' ')
