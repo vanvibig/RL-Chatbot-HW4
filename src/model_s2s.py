@@ -5,6 +5,7 @@ import os
 import random
 import tensorflow as tf
 import utils
+import time
 
 class ModelS2S:
 
@@ -261,6 +262,7 @@ class ModelS2S:
 			last_global_loss = float('inf')
 			global_loss_history = []
 			for epoch in range(self.epoch_init, 1000, 1):
+				start_epoch_time = time.time()
 				print '[Epoch #' + str(epoch) + ']'
 
 				train_pair_list = self._prepareTrainPairList()
@@ -275,7 +277,7 @@ class ModelS2S:
 
 					if i * 100 / len(train_pair_list) > percent:
 						percent += 1
-						print 'Process: {}%, Training loss: {}'.format(percent, np.mean(loss_history))
+						print 'Epoch: {}, Process: {}%, Training loss: {}'.format(epoch, percent, np.mean(loss_history))
 						print 'Samples:'
 						for i in range(len(self.data.sample_test_questions)):
 							question = self.data.sample_test_questions[i]
@@ -287,7 +289,7 @@ class ModelS2S:
 							print 'Q: {} A: {}'.format(question, answer)
 						
 				global_loss = np.mean(global_loss_history)
-				print 'Epoch Loss: {}'.format(global_loss)
+				print 'Epoch {}, Eslapsed time: {}, Loss: {}'.format(epoch, str(time.time()-start_epoch_time), global_loss)
 				global_loss_history = []
 				if last_global_loss < global_loss:
 					lr = sess.run(self.lr)
@@ -323,5 +325,6 @@ class ModelS2S:
 		
 
 model = ModelS2S()
-#model.train('data/model_s2s/model.ckpt-9')
-model.test('data/model_s2s/model.ckpt-10')
+model.train()
+# model.train('data/model_s2s/model.ckpt-9')
+# model.test('data/model_s2s/model.ckpt-10')
