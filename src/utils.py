@@ -132,7 +132,7 @@ class Utils:
 			line.replace('\n', '')
 			self.test_questions.append(self.captionToTokenList(line))
 
-	@staticmethod
+	# @staticmethod
 	def captionToTokenList(caption):
 		# Convert to lowercase
 		caption = caption.lower()
@@ -157,7 +157,7 @@ class Utils:
 
 		return token_list
 
-	@staticmethod
+	# @staticmethod
 	def tokenListToCaption(token_list):
 		# Trim words after EOS
 		if Utils.MARKER_EOS in token_list:
@@ -184,6 +184,7 @@ class Utils:
 
 if __name__ == '__main__':
 	utils = Utils()
+	print utils
 	print utils.word_vec_dict
 	file = open('data/word_list.txt', 'w')
 	for word in utils.word_list:
