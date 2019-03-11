@@ -105,7 +105,7 @@ class Utils:
 		word_freq_list = sorted(self.word_freq_dict.iteritems(), key=lambda (k, v): v, reverse=True)
 		self.word_list = self.marker_list + [k for (k, v) in word_freq_list]
 		print "defaultdict"
-		print defaultdict(lambda: self.marker_list.index(self.MARKER_OOV)).values()[0].shape[0]
+		print str(defaultdict(lambda: self.marker_list.index(self.MARKER_OOV)).values()[0])
 		self.word_index_dict = defaultdict(lambda: self.marker_list.index(self.MARKER_OOV))
 		self.word_index_dict.update([(self.word_list[i], i) for i in range(len(self.word_list))])
 
