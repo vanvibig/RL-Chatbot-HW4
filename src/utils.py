@@ -113,6 +113,7 @@ class Utils:
 
 	def __genWordVecDict(self):
 		if not os.path.isfile(self.filename_word_vec):
+    		print "he error"
 			return
 
 		self.word_vec_dict = defaultdict(lambda: self.MARKER_OOV)
