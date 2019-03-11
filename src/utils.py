@@ -132,7 +132,7 @@ class Utils:
 			line.replace('\n', '')
 			self.test_questions.append(self.captionToTokenList(line))
 
-	# @staticmethod
+	@staticmethod
 	def captionToTokenList(caption):
 		# Convert to lowercase
 		caption = caption.lower()
@@ -157,7 +157,7 @@ class Utils:
 
 		return token_list
 
-	# @staticmethod
+	@staticmethod
 	def tokenListToCaption(token_list):
 		# Trim words after EOS
 		if Utils.MARKER_EOS in token_list:
