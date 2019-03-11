@@ -87,7 +87,7 @@ class Utils:
 
 			conv_pair.append([q, a])
 
-			print "run __extractConvPair"
+		print "run __extractConvPair"
 
 	def __genWordList(self):
 		self.word_freq_dict = defaultdict(float)
