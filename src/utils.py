@@ -104,8 +104,6 @@ class Utils:
 
 		word_freq_list = sorted(self.word_freq_dict.iteritems(), key=lambda (k, v): v, reverse=True)
 		self.word_list = self.marker_list + [k for (k, v) in word_freq_list]
-		print "defaultdict"
-		print str(defaultdict(lambda: self.marker_list.index(self.MARKER_OOV)).values()[0])
 		self.word_index_dict = defaultdict(lambda: self.marker_list.index(self.MARKER_OOV))
 		self.word_index_dict.update([(self.word_list[i], i) for i in range(len(self.word_list))])
 
@@ -114,13 +112,17 @@ class Utils:
 			return
 
 		self.word_vec_dict = defaultdict(lambda: self.MARKER_OOV)
+		print self.word_vec_dict
 		with open(self.filename_word_vec, 'r') as file:
 			for line in file:
 				content = line.split()
 				vec = [float(elem) for elem in content[1:]]
 				self.word_vec_dict[content[0]] = np.array(vec, dtype=np.float32)
+				print self.word_vec_dict[content[0]]
 		for marker in self.marker_list:
 			self.word_vec_dict[marker] = np.zeros([300], dtype=np.float32)
+			print self.word_vec_dict[marker]
+
 
 	def __readTestQuestions(self):
 		file = open(self.filename_sample_test)
