@@ -3,7 +3,9 @@ import json
 import numpy as np
 import os
 import re
-
+from gensim.models import Word2Vec
+from gensim.models import FastText
+# from gensim.models.wrappers import FastText
 
 class Utils:
 
@@ -14,6 +16,7 @@ class Utils:
     filename_conv_pair_pickle = 'data/conv_pair.p'
     filename_sample_test = 'sample_input.txt'
     filename_test = 'test_input.txt'
+    filename_sent_list = 'data/sent_list.txt'
 
     MARKER_PAD = '<pad>'
     MARKER_BOS = '<s>'
@@ -39,6 +42,7 @@ class Utils:
         print 'Initializing...'
         self.__extractConvPair()
         self.__genWordList()
+        # self.__createWordVecDict()
         self.__genWordVecDict()
         self.__readTestQuestions()
 
@@ -90,7 +94,7 @@ class Utils:
             conv_pair.append([q, a])
 
         print "run __extractConvPair"
-
+        
     def __genWordList(self):
         self.word_freq_dict = defaultdict(float)
         total_word_count = 0.0
@@ -110,6 +114,13 @@ class Utils:
         word_freq_list = sorted(
             self.word_freq_dict.iteritems(), key=lambda (k, v): v, reverse=True)
         self.word_list = self.marker_list + [k for (k, v) in word_freq_list]
+        
+        # kv
+        word_list_txt = open('data/word_list.txt', 'w')
+        for w in self.word_list:
+            word_list_txt.write(w+'\n')
+        # end kv
+
         self.word_index_dict = defaultdict(
             lambda: self.marker_list.index(self.MARKER_OOV))
         self.word_index_dict.update(
@@ -117,24 +128,35 @@ class Utils:
 
         print "run __genWordList"
 
+    def __createWordVecDict(self):
+        train_data = []
+        sents = open(self.filename_sent_list, 'r').readlines()
+        for sent in sents:
+            train_data.append(sent.decode('utf-8').split())
+    
+        model_fasttext = FastText(size=300, window=5, min_count=2, workers=4, sg=1)
+        model_fasttext.build_vocab(train_data)
+        model_fasttext.train(train_data, total_examples=model_fasttext.corpus_count, epochs=model_fasttext.iter)
+        # model_fasttext.wv.save_word2vec_format("data/fasttext_gensim_word_vec.txt", binary=False)
+        model_fasttext.wv.save_word2vec_format("data/word_vec.txt", binary=False)
+        
+        # model = Word2Vec(train_data, size=300, window=5, min_count=2, workers=4, sg=1)
+        # model.wv.save_word2vec_format("data/word2vec_skipgram.txt", binary=False)
+        
+        print "run __createWordVecDict"
+
     def __genWordVecDict(self):
-        print "he error 0"
         if not os.path.isfile(self.filename_word_vec):
-            print "he error 1"
             return
-        print "here error 2"
         self.word_vec_dict = defaultdict(lambda: self.MARKER_OOV)
-        print self.word_vec_dict
         with open(self.filename_word_vec, 'r') as file:
             for line in file:
                 content = line.split()
                 vec = [float(elem) for elem in content[1:]]
                 self.word_vec_dict[content[0]] = np.array(
                     vec, dtype=np.float32)
-                print self.word_vec_dict[content[0]]
         for marker in self.marker_list:
             self.word_vec_dict[marker] = np.zeros([300], dtype=np.float32)
-            print self.word_vec_dict[marker]
 
         print "run __genWordVecDict"
 
@@ -210,8 +232,8 @@ class Utils:
 
 if __name__ == '__main__':
     utils = Utils()
-    print utils
-    print utils.word_vec_dict
-    file = open('data/word_list.txt', 'w')
-    for word in utils.word_list:
-        file.write(word + ' ')
+    # print utils
+    # print utils.word_vec_dict
+    # file = open('data/word_list.txt', 'w')
+    # for word in utils.word_list:
+    #     file.write(word + ' ')

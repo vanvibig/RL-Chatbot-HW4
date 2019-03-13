@@ -1,4 +1,4 @@
 /data/model_rl
 /data/model_s2s
-/data/word_vec.txt
+# /data/word_vec.txt
 .vscode
