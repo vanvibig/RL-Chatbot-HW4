@@ -98,8 +98,15 @@ class Utils:
     def __genWordList(self):
         self.word_freq_dict = defaultdict(float)
         total_word_count = 0.0
+        sent_list_txt = open('data/sent_list.txt', 'w')
         for pair in self.conv_pair:
             for sent in pair:
+                # print(u' '.join(s for s in sent if s != sent[-1]))
+                # kv
+                # for w in self.word_list:
+                s = u' '.join(s for s in sent if s != sent[-1])
+                sent_list_txt.write(s+'\n')
+                # end kv
                 for token in sent:
                     if token in self.marker_list:
                         continue
