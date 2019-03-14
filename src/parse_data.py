@@ -1,3 +1,10 @@
+# coding=utf-8
+# -*- coding: utf-8 -*-
+
+import sys
+reload(sys)
+sys.setdefaultencoding('utf8')
+
 from collections import defaultdict
 import json
 import numpy as np
@@ -5,6 +12,7 @@ import os
 import re
 from gensim.models import Word2Vec
 from gensim.models import FastText
+from pyvi import ViTokenizer
 # from gensim.models.wrappers import FastText
 
 class Utils:
@@ -54,6 +62,14 @@ class Utils:
         for line in file:
             line = line[:-1]
             tokens = re.split('\ \+\+\+\$\+\+\+\ ', line)
+            
+            # pyvi
+            # tokens_vi = u' '.join(t for t in tokens)
+            # tokens_vi = ViTokenizer.tokenize(tokens_vi)
+            # tokens_vi = re.split(' ', tokens_vi)
+            # movie_lines[tokens[0]] = tokens_vi
+            # end pvi
+
             movie_lines[tokens[0]] = tokens[4]
 
         # Read movie conversations
@@ -93,7 +109,8 @@ class Utils:
                 continue
 
             conv_pair.append([q, a])
-
+            print q
+            print a
         print "run __extractConvPair"
         
     def __genWordList(self):

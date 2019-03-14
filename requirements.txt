@@ -7,3 +7,4 @@ protobuf==3.7.0
 six==1.12.0
 tensorflow==1.0.0
 gensim
+pyvi

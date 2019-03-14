@@ -5,6 +5,7 @@ import os
 import re
 from gensim.models import Word2Vec
 from gensim.models import FastText
+from pyvi import ViTokenizer
 # from gensim.models.wrappers import FastText
 
 class Utils:
