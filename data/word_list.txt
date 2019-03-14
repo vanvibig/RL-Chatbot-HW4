@@ -226,8 +226,8 @@ nhất
 bên
 thời_gian
 đều
-lời
 bảo
+lời
 hôm_nay
 xong
 như_vậy
@@ -325,9 +325,9 @@ thầy
 dừng
 tuổi
 khỏe
-lớn
 dưới
 con_trai
+lớn
 khá
 trời
 tưởng
@@ -344,8 +344,8 @@ gã
 thẻ
 một_chút
 liệu
-hơi
 quan_tâm
+hơi
 công_việc
 đc
 gà
@@ -463,10 +463,10 @@ lính
 tham_gia
 trở
 to
-bận
 xa
 ước
 rắc_rối
+bận
 hàng
 bữa
 giữa
@@ -545,6 +545,7 @@ tránh
 hẹn
 yêu_cầu
 um
+cưới
 suy_nghĩ
 hạnh_phúc
 bệnh
@@ -552,7 +553,6 @@ bệnh
 suốt
 đời
 ít_nhất
-cưới
 vòng
 bí_mật
 tính
@@ -563,7 +563,6 @@ mơ
 bởi
 đám
 cố_gắng
-phiền
 hoàn_toàn
 cá
 dù
@@ -574,6 +573,7 @@ giỏi
 nha
 bảo_vệ
 giải_thích
+phiền
 may_mắn
 dành
 tiếp_tục
@@ -611,7 +611,6 @@ trộm
 thú
 chim
 lối
-lớp
 anh_chàng
 thực_ra
 gây
@@ -621,6 +620,7 @@ quyền
 lạnh
 điện
 ngạc_nhiên
+lớp
 light
 tóc
 càng
@@ -841,6 +841,7 @@ giây
 tộc
 câu_chuyện
 tình_yêu
+ô
 giải
 cầm
 máy_bay
@@ -878,7 +879,6 @@ tiệm
 mãi
 khu_vực
 phục_vụ
-ô
 toàn_bộ
 bước
 anh_trai
@@ -955,10 +955,10 @@ ninja
 chiều
 thèm
 tình_hình
-sói
 nửa
 thế_hả
 hôm
+sói
 11
 manny
 mạnh
@@ -967,16 +967,15 @@ dựa
 thỏa_thuận
 như_thể
 mất_tích
+làm_ăn
 mừng
 sạch
-làm_ăn
 woody
 hoa
 vẽ
 phố
 mãi_mãi
 quân_đội
-jiminy
 ngăn
 ross
 đất
@@ -1022,6 +1021,7 @@ chỉ_huy
 tập_trung
 giấy_tờ
 bận_tâm
+jiminy
 luật_sư
 mệt
 khốn_kiếp
@@ -1091,6 +1091,7 @@ rau
 có_nghĩa
 một_tí
 khách_sạn
+đây_vậy
 bể
 nhân_viên
 cảm_xúc
@@ -1147,7 +1148,6 @@ cởi
 bốn
 bất_ngờ
 sáu
-đây_vậy
 hấp_dẫn
 đua
 hmm
@@ -1181,6 +1181,7 @@ hồ
 tạm
 dị_ứng
 đỡ
+xà_phòng
 thường_xuyên
 dại
 xe_tải
@@ -1227,7 +1228,6 @@ khách_hàng
 ép
 giới_hạn
 chổi
-xà_phòng
 ngu
 sửa_chữa
 kêu
@@ -1254,6 +1254,7 @@ não
 cảm_nhận
 chuột_nhắt
 tốt_đẹp
+ngay_đây
 thám_tử
 cấp
 miệng
@@ -1304,6 +1305,7 @@ hợp
 khủng_khiếp
 mama
 ăn_mặc
+liền
 ngày_xưa
 quý
 aladdin
@@ -1315,7 +1317,6 @@ gió
 không_vậy
 1000
 white
-ngay_đây
 cây_thế_giới
 nhanh_chóng
 giống_hệt
@@ -1328,12 +1329,11 @@ bác_sỹ
 thử_thách
 sid
 vương
-mở_mắt
 sắt
+mở_mắt
 xương
 nhỡ
 thua
-liền
 trực_tiếp
 tín_hiệu
 bí_ẩn
@@ -1387,6 +1387,7 @@ a
 béo
 xử
 tỉnh
+thuốc_mê
 vệ_tinh
 bất_kỳ
 thực_hiện
@@ -1399,7 +1400,6 @@ trượt
 shaggy
 ban
 thời_điểm
-thuốc_mê
 vệ_sĩ
 tán_tỉnh
 từ_chối
@@ -1508,6 +1508,7 @@ chặn
 em_trai
 kem
 con_tin
+thần_thế_giới
 ha
 he
 nhắm_mắt
@@ -1564,7 +1565,6 @@ ali
 khó_khăn
 mảnh
 dụng_cụ
-thần_thế_giới
 flutterfield
 tròn
 suỵt
@@ -1701,6 +1701,7 @@ quê
 khung
 giáo_viên
 chốt
+thanh_toán
 còng
 ngược_đãi
 mm
@@ -1736,7 +1737,6 @@ nụ
 bẩn
 tiến_hành
 trao
-thanh_toán
 cầu_nguyện
 trọng_lực
 ngoại_trừ
@@ -1817,6 +1817,7 @@ mây
 lùi
 ghi
 tuỷ_sống
+y_như
 thiệt_hả
 space
 xì
@@ -1865,6 +1866,7 @@ phân
 thừa
 penny
 học_ư
+california
 hiệu_trưởng
 người_yêu
 mổ
@@ -1892,7 +1894,6 @@ mắc_kẹt
 giải_cứu
 khám_phá
 san_hô
-california
 verone
 trận
 1100
@@ -1962,7 +1963,6 @@ bớt
 scooby
 kinu
 bảng
-nhịn
 tối_thượng
 cốc
 có_ăn
@@ -1982,9 +1982,9 @@ nghiên_cứu
 nhử
 bé_nhỏ
 kinh_ngạc
-y_như
 nhẹ
 bỏng
+nhịn
 ma_tuyết
 phù_thủy_nhỏ
 thống_đốc
@@ -2016,13 +2016,11 @@ phoebe
 người_làm
 hình_nộm
 vô_dụng
-25
 móc
 du_côn
 ối
 giày
 lầm
-cứu_hộ
 nín
 đứt
 à_vậy
@@ -2047,7 +2045,6 @@ thể_hiện
 biên_giới
 trí
 nguồn
-thợ_săn
 đồi
 hạng
 cơ_bắp
@@ -2125,6 +2122,7 @@ triệu_đô
 xám
 lồng
 phục
+vận_mệnh
 ga
 lộn_xộn
 chanh
@@ -2147,6 +2145,7 @@ ban_ngày
 sinh_mạng
 đồng_đội
 hũ
+cleveland
 con_ruồi
 tin_cậy
 thanh_tra
@@ -2163,6 +2162,7 @@ brazil
 ginger
 don
 monica
+thợ_săn
 bar
 thời
 lỗ
@@ -2191,6 +2191,7 @@ sẹo
 kế
 tiến_triển
 rưỡi
+cứu_hộ
 thành_quả
 vậy_ta
 gọi_là
@@ -2201,6 +2202,7 @@ shimmervale
 đựng
 nuốt
 điện_đàm
+25
 thủy_tinh
 kĩ
 khớp
@@ -2214,7 +2216,6 @@ chicago
 lãng_mạn
 sink
 bầu
-sig
 hàng_hóa
 tôn_trọng
 bạn_ư
@@ -2281,7 +2282,6 @@ chẳng_lẽ
 tin_thế
 nhỏ_bé
 chia_sẻ
-vận_mệnh
 phiêu_lưu
 kệ
 để_dành
@@ -2289,11 +2289,11 @@ căn_hộ
 hồn
 bột
 bộn
-cleveland
 sylvein
 thép
 xây
 tao
+sig
 130
 ngưng
 rap
@@ -2341,7 +2341,6 @@ bực_mình
 sát_hại
 đảo
 vô_lý
-xoang
 812
 mồ_hôi_kìa
 cắp
@@ -2379,6 +2378,7 @@ câm
 nguyên_chất
 rèm
 castle
+video
 không_ư
 thống_lĩnh
 tres
@@ -2391,6 +2391,7 @@ héo
 đấu
 cất
 bù
+xoang
 khổ
 thang_máy
 salát
@@ -2417,7 +2418,7 @@ destiny
 ví
 cu
 đoán_vậy
-bầy
+dự_phòng
 va
 cú
 đánh_đổi
@@ -2461,7 +2462,6 @@ tốt_lành
 nhanh_nhẹn
 aram
 làng
-thợ_may
 thực_thụ
 thòn
 sốc
@@ -2470,7 +2470,7 @@ dầu
 cruces
 cam
 lòn
-vấp
+bắt_giữ
 dối_trá
 vấn
 bẩm_sinh
@@ -2496,7 +2496,6 @@ chủ_nhật
 tấn
 tuyệt_thật
 okay_tớ
-dự_phòng
 griffin
 rùa
 nhấc
@@ -2675,6 +2674,7 @@ sa_mạc
 giỏ
 hỗ_trợ
 kickstarter
+bầy
 thú_vật
 cutting
 marley
@@ -2701,7 +2701,6 @@ phát_âm
 phong
 henry
 ngăn_cản
-video
 tài_liệu
 tương_tự
 kẹo
@@ -2719,6 +2718,7 @@ không_khí
 biến_đổi
 tia
 bình
+thợ_may
 ngũ_cốc
 bệnh_dịch
 bắt_đầu_từ
@@ -2792,7 +2792,7 @@ tan
 kỵ
 dâng
 mắng
-bắt_giữ
+vấp
 yêu_anh
 brenda
 hình_mẫu
@@ -2880,6 +2880,7 @@ sam
 phá_án
 cài
 s
+teddy
 yêu_thích
 hạt_dẻ
 mươi
@@ -2914,6 +2915,7 @@ vì_vậy
 gọn
 bút
 quảng_cáo
+shimura
 gruffalo
 thứ_bảy
 nhân_vật
@@ -2935,6 +2937,7 @@ mục_sư
 nhận_diện
 lỗi_thời
 nát
+sharpay
 khối
 bốc_thăm
 bo
@@ -2967,7 +2970,6 @@ chấn_động
 căn_phòng
 đưa_tớ
 thầy_giáo
-không_chừng
 fiti
 nancy
 huck
@@ -2996,6 +2998,7 @@ thành_tích
 kế_tiếp
 dẫm
 tâm_lý_học
+thực_phẩm
 hiện_tượng
 hôn_phu
 nông_trại
@@ -3018,6 +3021,7 @@ phức_tạp_hóa
 cút
 miễn
 truy_đuổi
+ted
 công_trình
 ràng_buộc
 hệt
@@ -3070,7 +3074,7 @@ sự_việc
 nuốt_chửng
 đào_bới
 tin_tớ
-tức_giận
+logan
 bầu_trời
 truyền_thống
 gạ_gẫm
@@ -3165,7 +3169,6 @@ thiên_văn_học
 đồng_phạm
 fernando
 martin
-thực_phẩm
 cầu_vồng
 đánh_hơi
 chầm_chậm
@@ -3272,7 +3275,6 @@ nnhưng
 ramona
 bánh_bao
 hamburger
-sharpay
 22
 23
 28
@@ -3291,7 +3293,6 @@ kazuto
 miễn_là
 lợi_nhuận
 người_nhà
-cẩn_trọng
 trừng_phạt
 khuyến_mại
 bill
@@ -3407,7 +3408,6 @@ nhạc_công
 plum
 mới_phải
 sát
-teddy
 tình_nguyện
 danh_tính
 dọc
@@ -3435,6 +3435,7 @@ andrew
 chóng
 khôn_ngoan
 đạo_đức
+không_chừng
 ow
 gary
 cô_dâu
@@ -3444,7 +3445,6 @@ bụp
 prindaar
 garvey
 lương_thực
-ted
 chi_tiết
 tống_cổ
 phết
@@ -3454,7 +3454,7 @@ trang_phục
 đưa_đây
 townshend
 da_màu
-logan
+tức_giận
 marcus
 edwina
 ngắt
@@ -3483,7 +3483,6 @@ lưu
 song_sinh
 thượng_đế
 brian
-shimura
 hành_hạ
 cược
 crash
@@ -3508,6 +3507,7 @@ dung_nham
 mềm
 tin_tức
 sạch_sẽ
+cẩn_trọng
 cưa
 tiếp_tân
 khả_thi
@@ -3638,6 +3638,7 @@ nghỉ_việc
 venice
 dự_luật
 bắp_ngô_mei
+linh_cảm_thôi
 hóc
 saldana
 bông_gòn
@@ -3676,7 +3677,7 @@ bửa
 đích_thị
 anh_vũ_công
 hôn_mê
-hy_vọng_thế
+ânh
 mói
 môn_học
 chao_đèn
@@ -3736,7 +3737,7 @@ gastrous
 hâm_nóng
 vô_số
 nhạo_báng
-bố_dượng
+chấp_nhận_lời
 awol
 lillian
 dạ_dày
@@ -3746,7 +3747,7 @@ tỉ
 tể
 ngàibirmingham
 tủ
-hóc_môn
+tay_đua
 911
 linh_mục
 ngoại_tuyến
@@ -3824,7 +3825,6 @@ năm_bảy
 aah
 lắng_nghe_kìa
 đánh_vần
-đồ_thị
 thập_kỷ
 kiêu_hãnh
 play
@@ -3834,6 +3834,7 @@ radisson
 ác
 tông
 cảm_xúc_tiến_sĩ
+ninjas
 đường_huyết
 chữ_viết
 aladars
@@ -3852,7 +3853,6 @@ bệnh_thủy_đậu
 danh_bạ
 vận_động
 towne
-chuyên_ngành
 thời_khắc
 như_vầy
 pound
@@ -3872,7 +3872,6 @@ quyên
 gây_sự
 laurelkhu
 m44
-linh_cảm_thôi
 santa
 carol
 vung_vẩy
@@ -3951,7 +3950,7 @@ tạm_thời
 sổ_đen
 đài_bbc
 căn_cước
-nhẹp
+gunter
 bánh_quy_á
 tát
 450
@@ -4198,7 +4197,6 @@ tùy_cô
 lựơt
 cống_hiến
 qua_mặt
-vé_số
 dốc
 độn_thổ
 thi_thoảng
@@ -4415,9 +4413,7 @@ sáng_sủa
 khắc_xóa
 velma
 hôn_sana
-chútanh
 chỉ_định
-năng_suất
 đối_tượng
 cao_lương
 quạnh
@@ -4565,7 +4561,7 @@ vững_lòng
 bệnh_nhân_tâm_thần
 chơi_trội
 cuỗm
-ânh
+hy_vọng_thế
 gracey
 hôn_tớ
 trình
@@ -4649,6 +4645,7 @@ yea
 chút_cơ
 yes
 chõ_mũi
+đồ_thị
 máy_phát
 trước_nay
 làm_phiền_yuukisan
@@ -4778,7 +4775,6 @@ cập_nhật_danh_bạ
 thay_đổi_thế
 phóng_thích
 nhung
-buren
 thứ_tư
 nâu
 jigsaw
@@ -4837,6 +4833,7 @@ quận
 độc_đáo
 rôi
 chào_đón
+chútanh
 ngốc_vậy
 quince
 thời_gian_biểu
@@ -4854,7 +4851,6 @@ kê
 lắp_đặt
 vuốt
 cai_rượu
-nhau_ư
 phá_hoại
 tặng_phẩm
 nó_kìa
@@ -4867,6 +4863,7 @@ sơ_mi
 con_con_ư
 tiểu_thuyết
 trật_tự
+bố_dượng
 cũi
 hoàng_tộc
 nhảy_múa
@@ -4908,7 +4905,7 @@ tên_tuổi
 dấu_sơn
 morro
 steven
-mơ_hồ
+chuyên_ngành
 tuyệt_đẹp
 mứt
 mojtabai
@@ -4925,7 +4922,7 @@ nảy
 tombo
 cctv
 đấu_diều
-tay_đua
+hóc_môn
 băng_hà
 hirata
 nhà_nghỉ
@@ -5033,7 +5030,6 @@ kích
 sĩ_quan
 dẽ
 lăn_tăn
-hyup
 pia
 ha_ha
 49
@@ -5100,7 +5096,7 @@ sáng_chế
 toa
 thuế
 tá_túc_vậy
-bố_đấy
+nhau_ư
 nhì
 nhè
 thi_hành
@@ -5146,7 +5142,6 @@ may_vá
 anais
 góa_phu
 vuột
-ninjas
 59
 56
 lục_lọi
@@ -5157,6 +5152,7 @@ donald
 loa_kèn
 đinh_ốc
 ý_niệm
+năng_suất
 mãn
 sáu_ta
 thông_gió
@@ -5291,7 +5287,7 @@ mém
 lớn_tiếng_thế
 kinh_vậy
 quá_vậy
-gunter
+nhẹp
 bắn_cung
 lột
 lộn
@@ -5408,6 +5404,7 @@ rốckét
 bởi_vậy
 piermont
 chĩa
+mơ_hồ
 kích_hoạt
 nasa
 làm_chủ
@@ -5457,9 +5454,9 @@ mơ_mộng
 đề_cao
 đề_can
 chăm_chú
-chấp_nhận_lời
 thòng_lọng
 nhắc_nhở
+hyup
 80
 out
 bút_bi
@@ -5475,6 +5472,7 @@ nước_mắt
 viễn_tưởng
 chĩnh
 tạng
+bố_đấy
 dịu_dàng
 lưỡi
 có_ích_đấy
@@ -5510,6 +5508,7 @@ malla
 nguyên_nhân
 trôi_nổi
 buộc
+vé_số
 english
 thoả_thuận
 phân_tích
@@ -5532,6 +5531,7 @@ thu_gom
 sinh_nhật_cô
 thật_sự_ư
 mãn_kinh
+buren
 ra_phết
 mặt_nạ
 quá_đỗi
