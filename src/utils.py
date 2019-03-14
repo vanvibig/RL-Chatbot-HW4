@@ -1,3 +1,18 @@
+# coding=utf-8
+# -*- coding: utf-8 -*-
+
+# from __future__ import print_function
+
+
+import codecs
+
+import sys
+reload(sys)
+sys.setdefaultencoding('utf8')
+
+sys.stdout = codecs.getwriter('utf_8')(sys.stdout)
+sys.stdin = codecs.getreader('utf_8')(sys.stdin)
+
 from collections import defaultdict
 import json
 import numpy as np
@@ -5,7 +20,13 @@ import os
 import re
 from gensim.models import Word2Vec
 from gensim.models import FastText
+from pyvi import ViTokenizer
 # from gensim.models.wrappers import FastText
+
+import pickle
+import time
+
+from io import open
 
 class Utils:
 
@@ -43,13 +64,14 @@ class Utils:
         self.__extractConvPair()
         self.__genWordList()
         # self.__createWordVecDict()
+        # self.__editWordVecDict()
         self.__genWordVecDict()
         self.__readTestQuestions()
 
     def __extractConvPair(self):
         # Read movie lines
         movie_lines = dict()
-        file = open(self.filename_lines, 'r')
+        file = open(self.filename_lines, 'r', encoding='utf-8', errors='ignore')
         for line in file:
             line = line[:-1]
             tokens = re.split('\ \+\+\+\$\+\+\+\ ', line)
@@ -57,7 +79,7 @@ class Utils:
 
         # Read movie conversations
         movie_conv = []
-        file = open(self.filename_conversations, 'r')
+        file = open(self.filename_conversations, 'r', encoding='utf-8', errors='ignore')
         for line in file:
             line = line[:-1]
             tokens = re.split('\ \+\+\+\$\+\+\+\ ', line)
@@ -77,17 +99,21 @@ class Utils:
         # Extract elite conversation pair
         self.conv_pair = conv_pair = []
         for pair in raw_conv_pair:
-            q_sents = re.findall('[A-Z][^.!?]*[.!?]', pair[0])
+            # q_sents = re.findall('[A-Z][^.!?]*[.!?]', pair[0])
+            q_sents = ViTokenizer.tokenize(pair[0])
             if q_sents == []:
                 continue
-            q = self.captionToTokenList(q_sents[-1])
+            # q = self.captionToTokenList(q_sents[-1])
+            q = self.captionToTokenList(q_sents)
             if len(q) > self.max_seq_len:
                 continue
 
-            a_sents = re.findall('[A-Z][^.!?]*[.!?]', pair[1])
+            # a_sents = re.findall('[A-Z][^.!?]*[.!?]', pair[1])
+            a_sents = ViTokenizer.tokenize(pair[1])
             if a_sents == []:
                 continue
-            a = self.captionToTokenList(a_sents[0])
+            # a = self.captionToTokenList(a_sents[0])
+            a = self.captionToTokenList(a_sents)
             if len(a) > self.max_seq_len:
                 continue
 
@@ -98,7 +124,7 @@ class Utils:
     def __genWordList(self):
         self.word_freq_dict = defaultdict(float)
         total_word_count = 0.0
-        sent_list_txt = open('data/sent_list.txt', 'w')
+        sent_list_txt = open('data/sent_list.txt', 'w', encoding='utf-8', errors='ignore')
         for pair in self.conv_pair:
             for sent in pair:
                 # print(u' '.join(s for s in sent if s != sent[-1]))
@@ -123,9 +149,9 @@ class Utils:
         self.word_list = self.marker_list + [k for (k, v) in word_freq_list]
         
         # kv
-        word_list_txt = open('data/word_list.txt', 'w')
+        word_list_txt = open('data/word_list.txt', 'w', encoding='utf-8', errors='ignore')
         for w in self.word_list:
-            word_list_txt.write(w+'\n')
+            word_list_txt.write(w.decode('utf-8')+'\n')
         # end kv
 
         self.word_index_dict = defaultdict(
@@ -137,7 +163,7 @@ class Utils:
 
     def __createWordVecDict(self):
         train_data = []
-        sents = open(self.filename_sent_list, 'r').readlines()
+        sents = open(self.filename_sent_list, 'r', encoding='utf-8', errors='ignore').readlines()
         for sent in sents:
             train_data.append(sent.decode('utf-8').split())
     
@@ -145,18 +171,28 @@ class Utils:
         model_fasttext.build_vocab(train_data)
         model_fasttext.train(train_data, total_examples=model_fasttext.corpus_count, epochs=model_fasttext.iter)
         # model_fasttext.wv.save_word2vec_format("data/fasttext_gensim_word_vec.txt", binary=False)
-        model_fasttext.wv.save_word2vec_format("data/word_vec.txt", binary=False)
+        model_fasttext.wv.save_word2vec_format("data/word_vec_old.txt", binary=False)
         
         # model = Word2Vec(train_data, size=300, window=5, min_count=2, workers=4, sg=1)
         # model.wv.save_word2vec_format("data/word2vec_skipgram.txt", binary=False)
         
         print "run __createWordVecDict"
 
+    def __editWordVecDict(self):
+        new_file_wv = open('data/word_vec.txt', 'w', encoding='utf-8', errors='ignore')
+        old_file_wv = open('data/word_vec_old.txt', 'r', encoding='utf-8', errors='ignore').readlines()
+        # remove first line
+        old_file_wv = old_file_wv[1:]
+        for v in old_file_wv:
+            new_file_wv.write(v)
+        
+        print "run __editWordVecDict"
+
     def __genWordVecDict(self):
         if not os.path.isfile(self.filename_word_vec):
             return
         self.word_vec_dict = defaultdict(lambda: self.MARKER_OOV)
-        with open(self.filename_word_vec, 'r') as file:
+        with open(self.filename_word_vec, 'r', encoding='utf-8', errors='ignore') as file:
             for line in file:
                 content = line.split()
                 vec = [float(elem) for elem in content[1:]]
@@ -168,12 +204,12 @@ class Utils:
         print "run __genWordVecDict"
 
     def __readTestQuestions(self):
-        file = open(self.filename_sample_test)
+        file = open(self.filename_sample_test, encoding='utf-8', errors='ignore')
         self.sample_test_questions = []
         for line in file:
             line.replace('\n', '')
             self.sample_test_questions.append(self.captionToTokenList(line))
-        file = open(self.filename_test)
+        file = open(self.filename_test, encoding='utf-8', errors='ignore')
         self.test_questions = []
         for line in file:
             line.replace('\n', '')
@@ -186,27 +222,29 @@ class Utils:
         # Convert to lowercase
         caption = caption.lower()
 
-        # "blabla" -> blabla
-        caption = re.sub('"(?P<bla>([a-zA-Z]+))"',
-                         lambda m: m.group('bla'), caption)
+        # # "blabla" -> blabla
+        # caption = re.sub('"(?P<bla>([a-zA-Z]+))"',
+        #                  lambda m: m.group('bla'), caption)
 
         # Isolate trailing punctuations
-        caption = re.sub('(?P<letter>\w)(?P<punc>\W+)$',
-                         lambda m: m.group('letter') + ' ' + m.group('punc'), caption)
+        # caption = re.sub('(?P<letter>\w)(?P<punc>\W+)$',
+                        #  lambda m: m.group('letter') + ' ' + m.group('punc'), caption)
 
         # Isolate comma
-        caption = re.sub('(?P<letter>\w),', lambda m: m.group(
-            'letter') + ' , ', caption)
+        # caption = re.sub('(?P<letter>\w),', lambda m: m.group(
+            # 'letter') + ' , ', caption)
 
-        # Isolate 's
-        caption = re.sub("(?P<letter>\w)'s", lambda m: m.group(
-            'letter') + " 's ", caption)
+        # # Isolate 's
+        # caption = re.sub("(?P<letter>\w)'s", lambda m: m.group(
+        #     'letter') + " 's ", caption)
 
         # Tokenize
-        token_list = re.split('\s+', caption)
+        token_list = caption.split(' ')
+        # token_list = captions.decode('utf8')
 
         # Add EOS
         token_list.append(Utils.MARKER_EOS)
+        # token_list = []
 
         return token_list
 
@@ -226,13 +264,13 @@ class Utils:
         caption = caption[0:1].upper() + caption[1:]
 
         # Remove space before trailing punctuations
-        caption = re.sub(' (?P<punc>\W+)$', lambda m: m.group('punc'), caption)
+        # caption = re.sub(' (?P<punc>\W+)$', lambda m: m.group('punc'), caption)
 
         # Remove space before comma
         caption = re.sub(' , ', ', ', caption)
 
         # Remove space before 's
-        caption = re.sub(" (?P<punc>'s)", lambda m: m.group('punc'), caption)
+        # caption = re.sub(" (?P<punc>'s)", lambda m: m.group('punc'), caption)
 
         return caption
 
@@ -241,6 +279,6 @@ if __name__ == '__main__':
     utils = Utils()
     # print utils
     # print utils.word_vec_dict
-    # file = open('data/word_list.txt', 'w')
+    # file = open('data/word_list.txt', 'w', encoding='utf-8', errors='ignore')
     # for word in utils.word_list:
     #     file.write(word + ' ')
