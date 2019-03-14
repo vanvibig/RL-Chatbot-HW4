@@ -210,7 +210,12 @@ class ModelRL:
 			bleu = [bleu_eval.BLEU_fn(ans[i], ref[i]) for i in range(self.batch_size)]
 			bleu = [np.exp(i) - 1.0 for i in bleu]
 			for i in range(len(ans)):
-				if "don't know" in ans[i] or "dont know" in ans[i]:
+				if "không biết" or "Không biết" or "không biết." or "Không biết." or "Tớ không biết." \
+					"tớ không biết." or "Tớ không biết" or "tớ không biết" or "Tao không biết." \
+					or "tao không biết." or "tao không biết" or "Tao không biết" in ans[i] or \
+					"không biết" or "Không biết" or "không biết." or "Không biết." or "Tớ không biết." \
+					"tớ không biết." or "Tớ không biết" or "tớ không biết" or "Tao không biết." \
+					or "tao không biết." or "tao không biết" or "Tao không biết" in ans[i]:
 					bleu[i] = -1.0
 				else:
 					bleu[i] = 0.0

@@ -1,9 +1,9 @@
-Hello
-How are you?
-What's your name?
-Where do you come from?
-What do you do?
-What do you think of Machine Learning?
-Would you lie to me?
-Do you connect to CIA?
-Who's that stumbling around in the dark? State your business, or prepare to get winged!
+Xin chào
+Bạn khỏe không
+Cậu khỏe không
+Bạn tên gì
+Cậu tên gì
+Bạn ở đâu
+Cậu ở đâu
+Bạn làm nghề gì
+Cậu làm nghề gì
