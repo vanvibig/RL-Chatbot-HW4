@@ -217,6 +217,7 @@ class Utils:
         file = open(self.filename_sample_test, encoding='utf-8', errors='ignore')
         self.sample_test_questions = []
         for line in file:
+            line = ViTokenizer.tokenize(line)
             line.replace('\n', '')
             self.sample_test_questions.append(self.captionToTokenList(line))
         file = open(self.filename_test, encoding='utf-8', errors='ignore')
