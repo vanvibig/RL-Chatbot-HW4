@@ -77,7 +77,19 @@ class ModelS2S:
 		self.training = training = tf.placeholder(tf.bool, shape=[], name='training')
 
 		## Word embedding
+		## self.data.word_vec_dict[self.data.word_list[i]] for i in range(self.total_word_count)]
+		## ==> word_list[1] = hello
+		## ==> word_vec_dict['hello'] => [0.1, ..., 0.01023213]
+
 		w_word_emb = tf.constant(np.array([self.data.word_vec_dict[self.data.word_list[i]] for i in range(self.total_word_count)], dtype=np.float32), dtype=tf.float32)
+
+		# to_word_emb = []
+		# for i in range(self.total_word_count):
+    	# 	if self.data.word_vec_dict[self.data.word_list[i]]:
+    	# 		to_word_emb.append(self.data.word_vec_dict[self.data.word_list[i]])
+		# 	else:
+    	# 		to_word_emb.append(np.zeros([300], dtype=np.float32))
+		# w_word_emb = tf.constant(np.array(to_word_emb, dtype=np.float32), dtype=tf.float32)
 
 		## Question 
 		question_word_emb = tf.nn.embedding_lookup(w_word_emb, question)
