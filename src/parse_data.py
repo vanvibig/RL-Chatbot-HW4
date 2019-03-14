@@ -61,12 +61,22 @@ class Utils:
 
     def __init__(self):
         print 'Initializing...'
+        self.__pyviTokenizer()
         self.__extractConvPair()
         self.__genWordList()
         self.__createWordVecDict()
         self.__editWordVecDict()
         self.__genWordVecDict()
         self.__readTestQuestions()
+
+    def __pyviTokenizer(self):
+        file = open('data/movie_lines_o.txt', 'r', encoding='utf-8', errors='ignore')
+        file_new = open('data/movie_line.txt', 'w', encoding='utf-8', errors='ignore')
+        for line in file:
+            line = line.split(' +++$+++ ')
+            line[-1] = ViTokenizer.tokenize(line[-1])
+            line = u' +++$+++ '.join(w for w in line)
+            file_new.write(line.decode('utf-8')+'\n')
 
     def __extractConvPair(self):
         # Read movie lines
