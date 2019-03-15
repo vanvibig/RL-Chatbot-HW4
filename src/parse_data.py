@@ -71,7 +71,7 @@ class Utils:
 
     def __pyviTokenizer(self):
         file = open('data/movie_lines_o.txt', 'r', encoding='utf-8', errors='ignore')
-        file_new = open('data/movie_line.txt', 'w', encoding='utf-8', errors='ignore')
+        file_new = open('data/movie_lines.txt', 'w', encoding='utf-8', errors='ignore')
         for line in file:
             line = line.split(' +++$+++ ')
             line[-1] = ViTokenizer.tokenize(line[-1])
